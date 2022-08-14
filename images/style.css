@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  /* border-bottom: 2px solid #272727; */
+  position: fixed;
+  top: 0;
+}
+
+header a {
+  text-decoration: none;
+}
+
+.hamburger_menu {
+  cursor: pointer;
+}
+
+.hamburger_menu span {
+  display: block;
+  width: 24px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: #d3d3d3;
+}
+
+.hamburger_menu span:not(:first-child) {
+  margin-top: 4px;
+}
+
+.logo {
+  color: hsl(9, 80%, 68%);
+  font-size: 2.4rem;
+  font-family: cursive;
+}
+
+.right a {
+  color: #272727;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+}
+
+.cancel {
+  position: absolute;
+  right: 1rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  transform: scale(0.8);
+  color: #d3d3d3;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+
+.cancel:hover {
+  color: #fff;
+}
+
+input {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
+  display: none;
+}
+
+.side_bar {
+  width: 290px;
+  height: 100%;
+  background-color: hsl(199, 56%, 43%);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: all 0.6s ease;
+}
+
+.side_bar ul {
+  list-style: none;
+  margin-top: 2.5rem;
+  margin-left: 2rem;
+}
+
+.side_bar ul li {
+  width: 90%;
+  line-height: 2.9;
+}
+
+.side_bar ul li:not(:last-child) {
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.side_bar ul li a {
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #fff;
+}
+
+#check:checked ~ .side_bar {
+  left: 0;
+}
+
+section {
+  background: url(/projects/intensify/banner.jpg);
+  width: 100vw;
+  height: 100vh;
+}
